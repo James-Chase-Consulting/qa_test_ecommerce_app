@@ -27,23 +27,17 @@ Ensure you have the following tools installed on your machine:
 
 Follow these steps to pull and run the API from Docker Hub:
 
-1. Pull the API image from Docker Hub
-   ```sh
-   docker pull <docker-hub-repo-name>
-   ```
-2. Run the container
-   ```sh
-   docker run -d -p 3000:3000 --name ecommerce-api <docker-hub-repo-name>
-   ```
-3. Verify API is running
+# Step 1: Build the Docker Image
 
-   Open your browser or Postman and go to:
+```bash
+docker build -t ecommerce-qa-api .
+```
 
-   ```bash
-   http://localhost:3000/api-docs
-   ```
+# Step 2: Run the Docker Container
 
-   You should see the API documentation.
+```bash
+docker run -p 3000:3000 ecommerce-qa-api
+```
 
 ## 🔬 Task Requirements
 
